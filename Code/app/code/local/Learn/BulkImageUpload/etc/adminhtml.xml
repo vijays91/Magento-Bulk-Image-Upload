@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <bulkimageupload module="bulkimageupload">
+                    <title>Bulk Product Images Upload</title>
+                    <sort_order>71</sort_order>
+                    <children>
+                        <bulkimageupload_fields module="bulkimageupload">
+                            <title>Bulk Product Images Upload</title>
+                            <sort_order>20</sort_order>
+                            <action>bulkimageupload/adminhtml_bulkimageupload/</action>
+                        </bulkimageupload_fields>
+                        <settings translate="title" module="bulkimageupload">
+                            <title>Configuration</title>
+                            <action>adminhtml/system_config/edit/section/bulkimageupload_tab</action>
+                            <sort_order>40</sort_order>
+                        </settings>
+                    </children>
+                </bulkimageupload>
+            </children>
+        </catalog>
+    </menu>
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+				<children>
+                    <catalog>
+                        <children>
+                            <bulkimageupload>
+                                <title>Bulk Product Images Upload</title>
+                                <children>
+                                    <bulkimageupload_fields>
+                                        <title>Bulk Product Images Upload</title>
+                                    </bulkimageupload_fields>
+                                    <settings>
+                                        <title>Configuration</title>
+                                    </settings>
+                                </children>
+                            </bulkimageupload>	
+                        </children>
+                    </catalog>
+					<system>
+						<children>
+							<config>
+								<children>
+									<bulkimageupload_tab>
+										<title>Bulk Product Images Upload</title>
+										<sort_order>50</sort_order>
+									</bulkimageupload_tab>									
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

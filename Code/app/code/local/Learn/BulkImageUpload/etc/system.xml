@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <myconf_vijaystore translate="label" module="bulkimageupload">
+            <label>Bulk Product Images Upload</label>
+            <sort_order>400</sort_order>
+        </myconf_vijaystore>
+    </tabs>
+    
+	<sections>
+        <bulkimageupload_tab translate="label" module="bulkimageupload">
+            <label>Bulk Product Images Upload</label>
+            <tab>myconf_vijaystore</tab>
+            <sort_order>300</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+				<bulkimageupload_setting translate="label comment">
+                    <label>Bulk Product Images Upload Configuration</label>
+                    <sort_order>505</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+						<bulkimageupload_enable translate="label comment">
+                            <label>Enable</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <validate>required-entry</validate>
+                            <comment><![CDATA[Enable and Disable the Bulk Product Images Upload]]></comment>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bulkimageupload_enable>
+						<bulkimageupload_separate translate="label">
+                            <label>File Separator</label>
+                            <validate>required-entry</validate>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Separate the Image with SKU <br/> 
+                            <b>SKU{Separator}Sort Order{Separator}Label.ImageFormat </b> <br/>
+                            eg: sku-01-txtLabel.jpg <br/>
+                            <hr style='color: white;'/>
+                            <b>Upload the images in <span style='color:teal'>media/bulkupload/import</span> <br/> support only jpg, gif, png, jpeg   types</b>                             
+                            ]]></comment>
+                        </bulkimageupload_separate>                        
+					</fields>	
+				</bulkimageupload_setting>
+            </groups>
+        </bulkimageupload_tab>  
+    </sections>
+</config>
